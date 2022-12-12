@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        /* 
+            Crie uma lista de pacientes
+
+            Cada paciente dentro da lista, deverá conter
+                nome
+                idade
+                peso
+                altura
+
+            Escreva uma lista contendo o nome dos pacientes
+        */
+
+        const patients = [
+            {
+                name: "Roberto",
+                age: 34,
+                weight: 95,
+                height: 191
+            },
+            {
+                name: "Sofia",
+                age:29,
+                weight: 58,
+                height: 166
+            },
+            {
+                name: "João",
+                age: 42,
+                weight: 83,
+                height: 179
+            }
+        ]
+
+        let patientsNames = []
+        let patientsAges = []
+        let patientsWeights = []
+        let patientsHeights = []
+        
+
+        for (let patient of patients) {
+            patientsNames.push(patient.name)
+            patientsAges.push(patient.age)
+            patientsWeights.push(patient.weight)
+            patientsHeights.push(patient.height)
+
+            alert(`${patient.name} tem ${patient.age} anos, pesa ${patient.weight}kg e tem ${patient.height/100}m de altura`)
+
+        }
+
+        alert(patientsNames)
+        alert(patientsAges)
+        alert(patientsWeights)
+        alert(patientsHeights)
+
+
+    </script>
+
+</body>
+</html>
