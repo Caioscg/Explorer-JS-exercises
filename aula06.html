@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        /*
+            ** Jogo da advinhação **
+
+            Apresente a mensagem ao usuário:
+            "Advinhe o número que estou pensando? Está entre 0 e 10"
+
+            Crie um lógica para gerar um número aleatório 
+            e verificar se o número digitado é o mesmo que o aleatório gerado pelo sistema.
+
+            Enquanto o usuário não adivinhar o número, mostrar a mensagem:
+            "Erro, tente novamente:"
+
+            Caso o usuário acerte o número, apresentar a mensagem:
+            "Parabéns! Você advinhou o número em x tentativas"
+
+            Substitua o "x" da mensagem, pelo número de tentativas
+        */
+
+        let guess = prompt("Advinhe o número que estou pensando? Está entre 0 e 10")
+
+        let contador = 1
+        let random = Math.round(Math.random() * 10)
+
+        while(Number(guess) != random) {
+            contador++
+            guess = prompt(`Erro, tente novamente:`)
+        }
+        alert(`Parabéns! Você advinhou o número em ${contador} tentativas`)
+
+    </script>
+
+</body>
+</html>

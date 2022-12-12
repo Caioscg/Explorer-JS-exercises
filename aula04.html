@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        /*
+            Solicitar o nome do aluno e as 3 notas
+            do bimestre calcular a média daquele aluno.
+
+            A média positiva deverá ser maior que 6
+
+            Se o aluno passou no bimestre, dar os 
+            parabéns.
+
+            Se o aluno não passou no bimestre, 
+            motivar o aluno a dar seu melhor na prova
+            de recuperação.
+
+            Em ambos os casos, mostre uma mensagem com o nome do aluno e a nota
+        */
+
+        const nome = prompt("Qual o nome do(a) aluno(a)?")
+        const nota1 = prompt("Qual o valor da primeira prova")
+        const nota2 = prompt("Qual o valor da segunda prova")
+        const nota3 = prompt("Qual o valor da terceira prova")
+
+        let average = ((Number(nota1)+Number(nota2)+Number(nota3))/3).toFixed(2)
+        let result = average >= 6
+
+        if (result) {
+            alert(`Parabéns ${nome}, sua média foi: ${average}`)
+        }
+        else if (average <= 3) alert(`Reprovado!`)
+        else alert(`${nome}, estude para a pproa de recuperação, sua media foi: ${average}`)
+
+    </script>
+
+</body>
+</html>
