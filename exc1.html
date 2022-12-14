@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        /* 
+            pedir ao usúario 2 numeros e realizar etre eles:
+            soma, subtração, divisão, multiplicação, resto de divisão e
+            verificar se a soma é par ou impar e
+            verificar se os numeros são iguais ou diferentes.
+        */
+        alert("Digite 2 números para ver as suas operações.")
+
+        const numberOne = Number(prompt("Digite o primeiro número: "))
+        const numberTwo = Number(prompt("Digite o segundo número: "))
+
+        let sum = numberOne + numberTwo
+        let sub = numberOne - numberTwo
+        let div = numberOne / numberTwo
+        let mult = numberOne * numberTwo
+        let rest = numberOne % numberTwo
+
+        let parOuImpar = sum%2 === 0 ? "par" : "ímpar"
+        let equal = numberOne===numberTwo ? "iguais"  : "diferentes"
+
+        alert(`A soma é: ${sum}`)
+        alert(`A subtração é: ${sub}`)
+        alert(`A divisão é: ${div}`)
+        alert(`A multiplicação é: ${mult}`)
+        alert(`O resto da divisão é: ${rest}`)
+        alert(`A soma é ${parOuImpar}`)
+        alert(`Os números são ${equal}`)
+
+
+    </script>
+
+</body>
+</html>

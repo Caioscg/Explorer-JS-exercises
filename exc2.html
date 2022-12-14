@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        /* 
+            Nesse desafio você irá criar uma lista de estudantes e, cada estudante dentro dessa lista, deverá conter os seguintes dados:
+            - nome;
+            - nota da primeira prova;
+            - nota da segunda prova.
+
+            Dizer para os alunos se eles reprovaram ou passaram.
+        */
+
+        let students= [
+            {
+                name: "Maria",
+                firstGrade: 8.2,
+                secondGrade: 5.5
+            },
+            {
+                name: "João",
+                firstGrade: 6.2,
+                secondGrade: 5.5
+            },
+            {
+                name: "Clara",
+                firstGrade: 10.0,
+                secondGrade: 3.0
+            },
+        ]
+
+        let count = 0
+
+        while (count < students.length) {
+            alert(`A média do aluno foi: ${(average(students[count].firstGrade, students[count].secondGrade)).toFixed(2)}
+            \n${result(students[count].firstGrade, students[count].secondGrade, students[count].name)}`)
+            count++
+        }
+
+        function average(n1, n2) {
+            return (n1+n2)/2
+        }
+
+        function result(grade1, grade2, name) {
+            return ((grade1+grade2)/2) >= 6 ? `Parabéns, ${name}. Você passou de ano!` : `Não foi dessa vez, ${name}! Tente novamente.`
+        }
+
+    </script>
+
+</body>
+</html>
